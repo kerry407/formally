@@ -1,0 +1,100 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+venv/
+env/
+.env/
+.venv/
+virtualenv/
+
+# FastAPI specific
+*.sqlite3
+instance/
+build/
+dist/
+
+# Pydantic cache
+__pydantic_cache__/
+
+# Logs
+*.log
+*.log.*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*.swo
+*.swn
+*.bak
+*~
+
+# Python-specific
+pip-log.txt
+pip-delete-this-directory.txt
+
+# MyPy cache
+.mypy_cache/
+
+# Pytest cache
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Database-specific
+*.sqlite3
+*.db
+*.db-journal
+
+# Environment variables
+.env
+.env.*
+.env.production
+
+# Alembic migrations cache
+alembic/versions/*.pyc
+
+# Render deployment logs (if generated locally)
+render.yaml.logs/
+
+# Ignore IDE-specific directories and files
+.vscode/
+.idea/
+
+# Ignore any secrets or keys that might accidentally exist
+*.pem
+*.key
+*.crt
+
+# Node.js (optional, if frontend is integrated)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Mac-specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows-specific files
+Thumbs.db
+ehthumbs.db
