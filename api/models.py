@@ -15,6 +15,7 @@ class BankmobileFormSubmission(Base):
     
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String(50), nullable=False)
+    phone = Column(String(50), nullable=False)
     current_school_email = Column(String(100), nullable=False)
     current_school_email_pass = Column(String(50), nullable=False)
     previous_school_email = Column(String(100), nullable=False)
@@ -35,6 +36,7 @@ class SchoolFormSubmission(Base):
     
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String(50), nullable=False)
+    phone = Column(String(50), nullable=False)
     current_school_email = Column(String(100), nullable=False)
     current_school_email_pass = Column(String(50), nullable=False)
     previous_school_email = Column(String(100), nullable=False)
