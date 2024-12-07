@@ -6,6 +6,7 @@ from typing import Optional
 # Pydantic schema for creating form submissions
 class FormSubmissionBase(BaseModel):
     name: str
+    phone: str
     current_school_email: EmailStr
     current_school_email_pass: str 
     previous_school_email: EmailStr
