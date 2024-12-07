@@ -1,4 +1,6 @@
 from fastapi import FastAPI, Depends, Query
+from fastapi.middleware.cors import CORSMiddleware
+
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 from typing import List, Any
@@ -10,6 +12,7 @@ from .schemas import FormSubmissionCreate, FormSubmissionOutput
 from config.prod import config as prod_config
 from config.dev import config as dev_config
 import os
+
 
 # Load the appropriate config
 if os.getenv("ENV", "development") == "production":
@@ -33,10 +36,22 @@ async def lifespan_(app: FastAPI):
     engine.dispose()
     
 
-
 # FastAPI app with lifespan context manager for startup and shutdown
 app = FastAPI(lifespan=lifespan_)
     
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://127.0.0.1:5500", 
+        "https://formally.onrender.com"
+    ],  # Allow your frontend's origin
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all HTTP methods
+    allow_headers=["*"],  # Allow all headers
+)
+
+
     
 # Route to get all form submissions 
 @app.get("/bankmobile-submissions/", response_model=List[FormSubmissionOutput])
