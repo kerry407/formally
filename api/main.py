@@ -44,7 +44,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://127.0.0.1:5500", 
-        "https://formally.onrender.com"
+        "https://itdesktopforms.com",
+        "https://main.d31sjm3cbpao3l.amplifyapp.com/",
     ],  # Allow your frontend's origin
     allow_credentials=True,
     allow_methods=["*"],  # Allow all HTTP methods
